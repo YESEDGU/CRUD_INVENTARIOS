@@ -1,5 +1,5 @@
 <?php
-    const SERVER="http://localhost/Crud_Inventarios/";
+    const SERVERURL="http://localhost/Crud_Inventarios/";
 
     const COMPANY="Crud Inventarios";
 
