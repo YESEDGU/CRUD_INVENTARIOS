@@ -5,7 +5,7 @@
         /*----------------- Modelo Obtner las Vistas ----------------- */
 
         protected static function obtener_vistas_modelo($vistas){
-            $listaBlanca=[];
+            $listaBlanca=["home","prove-list"];
             if(in_array($vistas, haystack)){
 
                 if(is_file("./view/contenidos/".$vistas."-view.php")){

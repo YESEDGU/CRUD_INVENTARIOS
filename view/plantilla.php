@@ -7,6 +7,20 @@
     <?php include "./view/inc/Link.php"; ?>
 </head>
 <body>
+	<?php
+		$peticonAjax=false;
+		require_once "./controller/viewsController.php";
+		$IV = new viewsContoller();
+
+		$vistas=$IV->obtener_vistas_controlador();
+
+		if($vistas=="login" || $vistas=="404"){
+
+			require_once "./view/contenidos/".$vistas."-view.php";
+		}else{
+
+
+	?>
 	<!-- Main container -->
 	<main class="full-box main-container">
 		<!-- Nav lateral -->
@@ -17,6 +31,9 @@
             <?php include "./view/inc/NavBar.php"; ?>
 		</section>
 	</main>
-    <?php include "./view/inc/Script.php"; ?>
+    <?php 
+		}
+		include "./view/inc/Script.php"; 
+	?>
 </body>
 </html>
