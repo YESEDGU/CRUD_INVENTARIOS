@@ -6,7 +6,7 @@
 
         protected static function obtener_vistas_modelo($vistas){
             $listaBlanca=["home","prove-list"];
-            if(in_array($vistas, haystack)){
+            if(in_array($vistas, $listaBlanca)){
 
                 if(is_file("./view/contenidos/".$vistas."-view.php")){
                     $contenido="./view/contenidos/".$vistas."-view.php";
