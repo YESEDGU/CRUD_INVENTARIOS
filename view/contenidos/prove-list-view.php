@@ -14,10 +14,10 @@
 						<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR PROVEEDOR</a>
 					</li>
 					<li>
-						<a class="active" href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE PROVEEDORES</a>
+						<a class="active" href="provee-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE PROVEEDORES</a>
 					</li>
 					<li>
-						<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+						<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR PROVEEDOR</a>
 					</li>
 				</ul>	
 			</div>
@@ -29,11 +29,13 @@
 						<thead>
 							<tr class="text-center roboto-medium">
 								<th>#</th>
-								<th>DNI</th>
+								<th>NIT</th>
 								<th>NOMBRE</th>
-								<th>APELLIDO</th>
+								<th>DIRECCION</th>
 								<th>TELEFONO</th>
-								<th>DIRECCIÓN</th>
+								<th>CIUDAD</th>
+                                <th>DEPARTAMENTO</th>
+                                <th>PAIS</th>
 								<th>ACTUALIZAR</th>
 								<th>ELIMINAR</th>
 							</tr>
@@ -42,13 +44,16 @@
 							<tr class="text-center" >
 								<td>1</td>
 								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
+								<td>NOMBRE DEL PROVEEDOR</td>
+								<td>DIRECCION DEL PROVEEDOR </td>
 								<td>72349874</td>
-								<td>
-									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                <td>CIUDAD</td>
+                                <td>DEPARTAMENTO</td>
+                                <td>PAIS</td>
+								<!--<td>
+									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del Proveedor" data-content="Direccion completa del Proveedor"> 
 										<i class="fas fa-info-circle"></i>
-									</button>
+									</button>-->
 								</td>
 								<td>
 									<a href="client-update.html" class="btn btn-success">
@@ -66,13 +71,16 @@
 							<tr class="text-center" >
 								<td>2</td>
 								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
+								<td>NOMBRE DEL PROVEEDOR</td>
+								<td>DIRECCION DEL PROVEEDOR</td>
 								<td>72349874</td>
-								<td>
-									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                <td>CIUDAD</td>
+                                <td>DEPARTAMENTO</td>
+                                <td>PAIS</td>
+								<!--<td>
+									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del Proveedor" data-content="Direccion completa del Proveedor"> 
 										<i class="fas fa-info-circle"></i>
-									</button>
+									</button>-->
 								</td>
 								<td>
 									<a href="client-update.html" class="btn btn-success">
@@ -90,13 +98,16 @@
 							<tr class="text-center" >
 								<td>3</td>
 								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
+								<td>NOMBRE DEL PROVEEDOR</td>
+								<td>DIRECCION DEL PROVEEDOR</td>
 								<td>72349874</td>
-								<td>
-									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                <td>CIUDAD</td>
+                                <td>DEPARTAMENTO</td>
+                                <td>PAIS</td>
+								<!--<td>
+									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del Proveedor" data-content="Direccion completa del Proveedor">
 										<i class="fas fa-info-circle"></i>
-									</button>
+									</button>-->
 								</td>
 								<td>
 									<a href="client-update.html" class="btn btn-success">
@@ -114,13 +125,16 @@
 							<tr class="text-center" >
 								<td>4</td>
 								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
+								<td>NOMBRE DEL PROVEEDOR</td>
+								<td>DIRECCION DEL PROVEEDOR</td>
 								<td>72349874</td>
-								<td>
-									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                <td>CIUDAD</td>
+                                <td>DEPARTAMENTO</td>
+                                <td>PAIS</td>
+								<!--<td>
+									<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del Proveedor" data-content="Direccion completa del Proveedor">
 										<i class="fas fa-info-circle"></i>
-									</button>
+									</button>-->
 								</td>
 								<td>
 									<a href="client-update.html" class="btn btn-success">

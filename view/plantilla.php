@@ -28,7 +28,11 @@
 
 		<!-- Page content -->
 		<section class="full-box page-content">
-            <?php include "./view/inc/NavBar.php"; ?>
+            <?php 
+				include "./view/inc/NavBar.php"; 
+
+				include $vistas;
+			?>
 		</section>
 	</main>
     <?php 

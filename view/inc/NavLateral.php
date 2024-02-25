@@ -73,7 +73,7 @@
 									<a href="user-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Proveedor</a>
 								</li>
 								<li>
-									<a href="user-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Proveedores</a>
+									<a href="prove-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Proveedores</a>
 								</li>
 								<li>
 									<a href="user-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Proveedor</a>
