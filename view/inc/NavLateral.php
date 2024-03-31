@@ -76,7 +76,7 @@
 									<a href="prove-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Proveedores</a>
 								</li>
 								<li>
-									<a href="user-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Proveedor</a>
+									<a href="prove-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Proveedor</a>
 								</li>
 							</ul>
 						</li>

@@ -17,7 +17,7 @@
 						<a href="prove-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE PROVEEDORES</a>
 					</li>
 					<li>
-						<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR PROVEEDOR</a>
+						<a href="prove-search"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR PROVEEDOR</a>
 					</li>
 				</ul>	
 			</div>
