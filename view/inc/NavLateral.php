@@ -12,7 +12,7 @@
 				<nav class="full-box nav-lateral-menu">
 					<ul>
 						<li>
-							<a href="home.html"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
+							<a href="home"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
 						</li>
 
 						<li>
@@ -70,7 +70,7 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Proveedores <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="user-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Proveedor</a>
+									<a href="prove-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Proveedor</a>
 								</li>
 								<li>
 									<a href="prove-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Proveedores</a>
