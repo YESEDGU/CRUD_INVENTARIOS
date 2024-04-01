@@ -19,13 +19,13 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Usuario</a>
+									<a href="user-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Usuario</a>
 								</li>
 								<li>
-									<a href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Usuarios</a>
+									<a href="user-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Usuarios</a>
 								</li>
 								<li>
-									<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Usuario</a>
+									<a href="user-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Usuario</a>
 								</li>
 							</ul>
 						</li>
