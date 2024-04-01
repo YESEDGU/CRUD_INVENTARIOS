@@ -96,7 +96,7 @@
 									</button-->
 								</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="prove-update" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
@@ -123,7 +123,7 @@
 									</button-->
 								</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="prove-update" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
@@ -150,7 +150,7 @@
 									</button-->
 								</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="prove-update" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
@@ -177,7 +177,7 @@
 									</button-->
 								</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="prove-update" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
