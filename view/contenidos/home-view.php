@@ -10,7 +10,7 @@
 			
 			<!-- Content -->
 			<div class="full-box tile-container">
-				<a href="client-new.html" class="tile">
+				<a href="user-list" class="tile">
 					<div class="tile-tittle">Usuarios</div>
 					<div class="tile-icon">
 						<i class="fas fa-users fa-fw"></i>
