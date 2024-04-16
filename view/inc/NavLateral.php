@@ -34,13 +34,13 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Productos <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="item-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Producto</a>
+									<a href="prod-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Producto</a>
 								</li>
 								<li>
 									<a href="prod-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Productos</a>
 								</li>
 								<li>
-									<a href="item-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Productos</a>
+									<a href="prod-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Productos</a>
 								</li>
 							</ul>
 						</li>
