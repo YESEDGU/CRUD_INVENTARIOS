@@ -18,7 +18,7 @@
 					</div>
 				</a>
 				
-				<a href="item-list.html" class="tile">
+				<a href="prod-list" class="tile">
 					<div class="tile-tittle">Productos</div>
 					<div class="tile-icon">
 						<i class="fas fa-pallet fa-fw"></i>
