@@ -58,15 +58,24 @@
 										</select>
 									</div>
 								</div>
-                                <div class="col-12 col-md-6">
+								<div class="col-12 col-md-6">
 									<div class="form-group">
-										<label for="item_estado" class="bmd-label-floating">Lote</label>
-										<select class="form-control" name="item_estado_reg" id="item_estado">
-											<option value="" selected="" disabled="">Seleccione una opción</option>
-											<option value="Habilitado">Serial Lote</option>
-										</select>
+										<label for="item_detalle" class="bmd-label-floating">Lote</label>
+										<input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{1,190}" class="form-control" name="item_detalle_reg" id="item_detalle" maxlength="190">
 									</div>
 								</div>
+								<div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="prestamo_fecha_inicio">Fecha Fabricacion</label>
+                                            <input type="date" class="form-control" name="prestamo_fecha_inicio_reg" id="prestamo_fecha_inicio">
+                                        </div>
+                                    </div>
+									<div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="prestamo_fecha_inicio">Fecha Vencimiento</label>
+                                            <input type="date" class="form-control" name="prestamo_fecha_inicio_reg" id="prestamo_fecha_inicio">
+                                        </div>
+                                    </div>
 								<div class="col-12 col-md-6">
 									<div class="form-group">
 										<label for="item_detalle" class="bmd-label-floating">Descripcion</label>

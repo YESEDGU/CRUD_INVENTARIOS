@@ -49,7 +49,7 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Ordenes de Compras <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva Orden de Compra</a>
+									<a href="ord-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva Orden de Compra</a>
 								</li>
 								<li>
 									<a href="reservation-reservation.html"><i class="far fa-calendar-alt fa-fw"></i> &nbsp; Ingresos a Bodega</a>
