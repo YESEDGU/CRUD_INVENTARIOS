@@ -54,18 +54,34 @@
 										<input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{1,190}" class="form-control" name="item_detalle_reg" id="item_detalle" maxlength="190">
 									</div>
 								</div>
+                                <div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="usuario_dni" class="bmd-label-floating">Cantidad</label>
+										<input type="text" pattern="[0-9-]{1,20}" class="form-control" name="usuario_dni_reg" id="usuario_dni" maxlength="20">
+									</div>
+								</div>
+                                <div class="col-12 col-md-4">
+                                        <div class="form-group">
+                                            <label for="prestamo_total" class="bmd-label-floating">Precio Unidad $</label>
+                                            <input type="text" pattern="[0-9.]{1,10}" class="form-control" readonly="" value="100.00" id="prestamo_total" maxlength="10">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="form-group">
+                                            <label for="prestamo_total" class="bmd-label-floating">Total a pagar $</label>
+                                            <input type="text" pattern="[0-9.]{1,10}" class="form-control" readonly="" value="100.00" id="prestamo_total" maxlength="10">
+                                        </div>
+                                    </div>
 							</div>
 						</div>
                         <div class="table-responsive">
                             <table class="table table-dark table-sm">
                                 <thead>
                                     <tr class="text-center roboto-medium">
-                                        <th>ITEM</th>
+                                        <th>PRODUCTO</th>
                                         <th>CANTIDAD</th>
-                                        <th>TIEMPO</th>
-                                        <th>COSTO</th>
-                                        <th>SUBTOTAL</th>
-                                        <th>DETALLE</th>
+                                        <th>PRECIO UNIDAD</th>
+                                        <th>TOTAL A PAGAR</th>
                                         <th>ELIMINAR</th>
                                     </tr>
                                 </thead>
@@ -73,14 +89,13 @@
                                     <tr class="text-center" >
                                         <td>Silla plastica</td>
                                         <td>7</td>
-                                        <td>Hora</td>
                                         <td>$5.00</td>
                                         <td>$35.00</td>
-                                        <td>
+                                        <!--<td>
                                             <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del item" data-content="Detalle completo del item">
                                                 <i class="fas fa-info-circle"></i>
                                             </button>
-                                        </td>
+                                        </td> -->
                                         <td>
                                             <form action="">
                                                 <button type="button" class="btn btn-warning">
@@ -92,14 +107,13 @@
                                     <tr class="text-center" >
                                         <td>Silla metalica</td>
                                         <td>9</td>
-                                        <td>Día</td>
                                         <td>$5.00</td>
                                         <td>$45.00</td>
-                                        <td>
+                                        <!--<td>
                                             <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del item" data-content="Detalle completo del item">
                                                 <i class="fas fa-info-circle"></i>
                                             </button>
-                                        </td>
+                                        </td>-->
                                         <td>
                                             <form action="">
                                                 <button type="button" class="btn btn-warning">
@@ -111,14 +125,13 @@
                                     <tr class="text-center" >
                                         <td>Mesa plastica</td>
                                         <td>5</td>
-                                        <td>Evento</td>
                                         <td>$10.00</td>
                                         <td>$50.00</td>
-                                        <td>
+                                        <!--<td>
                                             <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del item" data-content="Detalle completo del item">
                                                 <i class="fas fa-info-circle"></i>
                                             </button>
-                                        </td>
+                                        </td>-->
                                         <td>
                                             <form action="">
                                                 <button type="button" class="btn btn-warning">
@@ -130,7 +143,7 @@
                                     <tr class="text-center bg-light">
                                         <td><strong>TOTAL</strong></td>
                                         <td><strong>21 items</strong></td>
-                                        <td colspan="2"></td>
+                                        <td colspan="1"></td>
                                         <td><strong>$130.00</strong></td>
                                         <td colspan="2"></td>
                                     </tr>
