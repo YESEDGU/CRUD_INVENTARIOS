@@ -15,7 +15,7 @@
                         <a class="active" href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVA ORDEN DE COMPRA</a>
                     </li>
                     <li>
-                        <a href="reservation-reservation.html"><i class="far fa-calendar-alt"></i> &nbsp; INGRESO A BODEGA</a>
+                        <a href="inbod-list"><i class="far fa-calendar-alt"></i> &nbsp; INGRESO A BODEGA</a>
                     </li>
                     <li>
                         <a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; SALIDA DE BODEGA</a>

@@ -52,7 +52,7 @@
 									<a href="ord-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva Orden de Compra</a>
 								</li>
 								<li>
-									<a href="reservation-reservation.html"><i class="far fa-calendar-alt fa-fw"></i> &nbsp; Ingresos a Bodega</a>
+									<a href="inbod-list"><i class="far fa-calendar-alt fa-fw"></i> &nbsp; Ingresos a Bodega</a>
 								</li>
 								<li>
 									<a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Salidas de Bodega</a>

@@ -26,7 +26,7 @@
 					</div>
 				</a>
 
-				<a href="reservation-reservation.html" class="tile">
+				<a href="inbod-list" class="tile">
 					<div class="tile-tittle">Ingresos a Bodega</div>
 					<div class="tile-icon">
 						<i class="far fa-calendar-alt fa-fw"></i>
