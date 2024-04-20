@@ -50,7 +50,7 @@
                                 <td>300</td>
                                 <td>PROVEEDOR</td>
                                 <td>
-                                    <a href="reservation-update.html" class="btn btn-success">
+                                    <a href="ord-update" class="btn btn-success">
                                             <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
@@ -69,7 +69,7 @@
                                 <td>500</td>
                                 <td>PROVEEDOR</td>
                                 <td>
-                                    <a href="reservation-update.html" class="btn btn-success">
+                                    <a href="ord-update" class="btn btn-success">
                                             <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
@@ -88,7 +88,7 @@
                                 <td>850</td>
                                 <td>PROVEEDOR</td>
                                 <td>
-                                    <a href="reservation-update.html" class="btn btn-success">
+                                    <a href="ord-update" class="btn btn-success">
                                             <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
@@ -107,7 +107,7 @@
                                 <td>980</td>
                                 <td>PROVEEDOR</td>
                                 <td>
-                                    <a href="reservation-update.html" class="btn btn-success">
+                                    <a href="ord-update" class="btn btn-success">
                                             <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
