@@ -55,7 +55,7 @@
 									<a href="inbod-list"><i class="far fa-calendar-alt fa-fw"></i> &nbsp; Ingresos a Bodega</a>
 								</li>
 								<li>
-									<a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Salidas de Bodega</a>
+									<a href="salidas"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Salidas de Bodega</a>
 								</li>
 								<li>
 									<a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Devoluciones</a>

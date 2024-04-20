@@ -18,7 +18,7 @@
                         <a href="inbod-list"><i class="far fa-calendar-alt"></i> &nbsp; INGRESO A BODEGA</a>
                     </li>
                     <li>
-                        <a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; SALIDA DE BODEGA</a>
+                        <a href="salidas"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; SALIDA DE BODEGA</a>
                     </li>
                     <li>
                         <a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; DEVOLUCIONES</a>
