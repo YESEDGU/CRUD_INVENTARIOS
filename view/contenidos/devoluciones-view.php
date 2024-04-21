@@ -1,7 +1,7 @@
-           <!-- Page header -->
-           <div class="full-box page-header">
+          <!-- Page header -->
+          <div class="full-box page-header">
 			    <h3 class="text-left">
-			        <i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; SALIDA DE BODEGA
+			        <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; DEVOLUCIONES
 			    </h3>
 			    <p class="text-justify">
 			        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia fugiat est ducimus inventore, repellendus deserunt cum aliquam dignissimos, consequuntur molestiae perferendis quae, impedit doloribus harum necessitatibus magnam voluptatem voluptatum alias!
@@ -11,16 +11,16 @@
 			<div class="container-fluid">
 			    <ul class="full-box list-unstyled page-nav-tabs">
 			        <li>
-			            <a href="ord-new"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVA ORDEN DE COMPRA</a>
+			            <a href="ord-new"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO ORDEN DE COMPRA</a>
 			        </li>
 			        <li>
 			            <a href="inbod-list"><i class="far fa-calendar-alt"></i> &nbsp; INGRESO A BODEGA</a>
 			        </li>
 			        <li>
-			            <a class="active" href="salidas"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; SALIDA DE BODEGA</a>
+			            <a href="salidas"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; SALIDA DE BODEGA</a>
 			        </li>
 			        <li>
-			            <a href="devoluciones"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; DEVOLUCIONES</a>
+			            <a class="active" href="devoluciones"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; DEVOLUCIONES</a>
 			        </li>
 			        <li>
 			            <a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR POR FECHA</a>
@@ -32,13 +32,13 @@
 							<div class="row">
                                 <div class="col-12 col-md-6">
                                         <div class="form-group">
-                                            <label for="prestamo_fecha_inicio">Fecha Salida</label>
+                                            <label for="prestamo_fecha_inicio">Fecha Devolucion</label>
                                             <input type="date" class="form-control" name="prestamo_fecha_inicio_reg" id="prestamo_fecha_inicio">
                                         </div>
                                     </div>
 								<div class="col-12 col-md-4">
 									<div class="form-group">
-										<label for="item_nombre" class="bmd-label-floating">Numero Salida</label>
+										<label for="item_nombre" class="bmd-label-floating">Numero Devolucion</label>
 										<input type="text" pattern="[a-zA-záéíóúÁÉÍÓÚñÑ0-9 ]{1,140}" class="form-control" name="item_nombre_reg" id="item_nombre" maxlength="140">
 									</div>
 								</div>
@@ -68,7 +68,7 @@
                                     </div>
                                     <div class="col-12 col-md-4">
                                         <div class="form-group">
-                                            <label for="prestamo_total" class="bmd-label-floating">Total a pagar $</label>
+                                            <label for="prestamo_total" class="bmd-label-floating">Total Devolucion$</label>
                                             <input type="text" pattern="[0-9.]{1,10}" class="form-control" readonly="" value="100.00" id="prestamo_total" maxlength="10">
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                                         <th>PRODUCTO</th>
                                         <th>CANTIDAD</th>
                                         <th>PRECIO UNIDAD</th>
-                                        <th>TOTAL A PAGAR</th>
+                                        <th>TOTAL A DEVOLUCION</th>
                                         <th>ELIMINAR</th>
                                     </tr>
                                 </thead>

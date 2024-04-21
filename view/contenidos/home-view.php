@@ -42,7 +42,7 @@
 					</div>
 				</a>
 
-				<a href="reservation-list.html" class="tile">
+				<a href="devoluciones" class="tile">
 					<div class="tile-tittle">Devoluciones</div>
 					<div class="tile-icon">
 						<i class="fas fa-clipboard-list fa-fw"></i>

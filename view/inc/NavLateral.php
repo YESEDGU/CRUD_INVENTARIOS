@@ -58,7 +58,7 @@
 									<a href="salidas"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Salidas de Bodega</a>
 								</li>
 								<li>
-									<a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Devoluciones</a>
+									<a href="devoluciones"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Devoluciones</a>
 								</li>
 								<li>
 									<a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar por fecha</a>
