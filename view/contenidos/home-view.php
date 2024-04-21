@@ -34,7 +34,7 @@
 					</div>
 				</a>
 
-				<a href="reservation-pending.html" class="tile">
+				<a href="salidas" class="tile">
 					<div class="tile-tittle">Salidas de Bodega</div>
 					<div class="tile-icon">
 						<i class="fas fa-hand-holding-usd fa-fw"></i>
