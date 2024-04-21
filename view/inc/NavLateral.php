@@ -61,7 +61,7 @@
 									<a href="devoluciones"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Devoluciones</a>
 								</li>
 								<li>
-									<a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar por fecha</a>
+									<a href="ord-search"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar por fecha</a>
 								</li>
 							</ul>
 						</li>

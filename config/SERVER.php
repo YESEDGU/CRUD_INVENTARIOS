@@ -2,7 +2,7 @@
 
     const SERVER="localhost";
     const DB="crud_inventario";
-    const USER="";
+    const USER="root";
     const PASS="";
 
     const SGBD="mysql:host=".SERVER.";dbname=".DB;
