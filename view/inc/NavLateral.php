@@ -82,7 +82,7 @@
 						</li>
 
 						<li>
-							<a href="company.html"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Sucursales</a>
+							<a href="sucursal-new"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Sucursales</a>
 						</li>
 					</ul>
 				</nav>

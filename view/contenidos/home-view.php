@@ -58,7 +58,7 @@
 					</div>
 				</a>
 
-				<a href="company.html" class="tile">
+				<a href="sucursal-list" class="tile">
 					<div class="tile-tittle">Sucursales</div>
 					<div class="tile-icon">
 						<i class="fas fa-store-alt fa-fw"></i>
