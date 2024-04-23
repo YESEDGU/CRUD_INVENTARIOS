@@ -1,182 +1,168 @@
 <?php
 
-    if($peticonAjax){
+if ($peticonAjax) {
 
-        require_once "../config/SERVER.php";
+    require_once "../config/SERVER.php";
+} else {
 
-    }else{
+    require_once "./config/SERVER.php";
+}
 
-        require_once "./config/SERVER.php";
+class mainModel
+{
+
+    /*----- Funcion para conectar a la BD -------*/
+
+    protected static function conectar()
+    {
+
+        /* $mdb = new PDO('mysql:host=localhost;dbname=prueba', $usuario, $cpntraseña);*/
+
+        $conexion = new PDO(SGBD, USER, PASS);
+        $conexion->exec("SET CHARACTER SET utf8");
+        return $conexion;
     }
 
-    class mainModel {
+    /*----- Funcion Ejecutar Consultas Simples -------*/
 
-        /*----- Funcion para conectar a la BD -------*/
+    protected static function ejecutar_consulta_simple($consulta)
+    {
 
-        protected static function conectar (){
+        $sql = self::conectar()->prepare($consulta);
+        $sql->execute();
+        return $sql;
+    }
 
-            /* $mdb = new PDO('mysql:host=localhost;dbname=prueba', $usuario, $cpntraseña);*/
+    /*--- Encriptar Cadenas ---*/
 
-            $conexion = new PDO(SGBD, USER, PASS);
-            $conexion ->exec("SET CHARACTER SET utf8");
-            return $conexion;
+    public function encryption($string)
+    {
+        $output = FALSE;
+        $key = hash('sha256', SECRET_KEY);
+        $iv = substr(hash('sha256', SECRET_IV), 0, 16);
+        $output = openssl_encrypt($string, METHOD, $key, 0, $iv);
+        $output = base64_encode($output);
+        return $output;
+    }
+
+    /*--- Desncriptar Cadenas ---*/
+
+    protected static function decryption($string)
+    {
+        $key = hash('sha256', SECRET_KEY);
+        $iv = substr(hash('sha256', SECRET_IV), 0, 16);
+        $output = openssl_decrypt(base64_decode($string), METHOD, $key, 0, $iv);
+        return $output;
+    }
+
+    /* ----- Funcion para Limpiar Cadenas -----*/
+
+    protected static function limpiar_cadena($cadena)
+    {
+
+        $cadena = trim($cadena); // Espacios en blanco
+        $cadena = stripslashes($cadena); // barras invertidas
+        $cadena = str_ireplace("<script>", "", $cadena); //quita etiquetas javascript
+        $cadena = str_ireplace("</script>", "", $cadena);
+        $cadena = str_ireplace("<script src>", "", $cadena);
+        $cadena = str_ireplace("<script type=", "", $cadena);
+        $cadena = str_ireplace("SELECT * FROM", "", $cadena);
+        $cadena = str_ireplace("DELETE FROM", "", $cadena);
+        $cadena = str_ireplace("INSERT INTO", "", $cadena);
+        $cadena = str_ireplace("DROP TABLE", "", $cadena);
+        $cadena = str_ireplace("DROP DATABASE", "", $cadena);
+        $cadena = str_ireplace("TRUNCATE TABLE", "", $cadena);
+        $cadena = str_ireplace("SHOW TABLES", "", $cadena);
+        $cadena = str_ireplace("SHOW DATABASES", "", $cadena);
+        $cadena = str_ireplace("<? php", "", $cadena);
+        $cadena = str_ireplace("?>", "", $cadena);
+        $cadena = str_ireplace("--", "", $cadena);
+        $cadena = str_ireplace(">", "", $cadena);
+        $cadena = str_ireplace("<", "", $cadena);
+        $cadena = str_ireplace("[", "", $cadena);
+        $cadena = str_ireplace("]", "", $cadena);
+        $cadena = str_ireplace("^", "", $cadena);
+        $cadena = str_ireplace("==", "", $cadena);
+        $cadena = str_ireplace(";", "", $cadena);
+        $cadena = str_ireplace("::", "", $cadena);
+        $cadena = stripslashes($cadena);
+        $cadena = trim($cadena);
+        return $cadena;
+    }
+
+    /* ----- Funcion Verificar Datos -----*/
+
+    protected static function verificar_datos($filtro, $cadena)
+    {
+        if (preg_match("/^" . $filtro . "$/", $cadena)) {
+            return false;
+        } else {
+            return true;
         }
+    }
 
-        /*----- Funcion Ejecutar Consultas Simples -------*/
+    /* ----- Funcion Verificar Fechas -----*/
 
-        protected static function ejecutar_consulta_simple($consulta){
+    protected static function verificar_fecha($fecha)
+    {
+        $valores = explode('-', $fecha);
+        if (count($valores) == 3 && checkdate($valores[1], $valores[2], $valores[0])) {
 
-            $sql=self::conectar()->prepare($consulta);
-            $sql->execute();
-            return $sql;
+            return false;
+        } else {
+
+            return true;
         }
+    }
 
-        /*--- Encriptar Cadenas ---*/
+    /* ----- Funcion Paginador de Tablas -----*/
 
-        public function encryption($string){
-			$output=FALSE;
-			$key=hash('sha256', SECRET_KEY);
-			$iv=substr(hash('sha256', SECRET_IV), 0, 16);
-			$output=openssl_encrypt($string, METHOD, $key, 0, $iv);
-			$output=base64_encode($output);
-			return $output;
-		}
+    protected static function paginador_tablas($pagina, $Npaginas, $url, $botones)
+    {
 
-         /*--- Desncriptar Cadenas ---*/
+        $tabla = '<nav aria-label="Page navigation example"><ul class="pagination justify-content-center">';
 
-		protected static function decryption($string){
-			$key=hash('sha256', SECRET_KEY);
-			$iv=substr(hash('sha256', SECRET_IV), 0, 16);
-			$output=openssl_decrypt(base64_decode($string), METHOD, $key, 0, $iv);
-			return $output;
-		}
-
-
-        /* ----- Funcion Generar Codigos Aleatorios -----
-
-        protected static function generar_codigo_aleatorio($letra,$longitud,$numero){
-
-            for($i=0; i<=$longitud; $i++){
-                $aleatorio= rand(0,9);
-                $letra.=$aleatorio;
-            }
-            return $letra."-".$numero;
-        } */
-
-        /* ----- Funcion para Limpiar Cadenas -----*/
-
-        protected static function limpiar_cadena($cadena){
-
-            $cadena=trim($cadena); // Espacios en blanco
-            $cadena=stripslashes($cadena); // barras invertidas
-            $cadena=str_ireplace("<script>","",$cadena); //quita etiquetas javascript
-            $cadena=str_ireplace("</script>", "", $cadena);
-            $cadena=str_ireplace("<script src>", "", $cadena);
-            $cadena=str_ireplace("<script type=", "", $cadena);
-            $cadena=str_ireplace("SELECT * FROM", "", $cadena);
-            $cadena=str_ireplace("DELETE FROM", "", $cadena);
-            $cadena=str_ireplace("INSERT INTO", "", $cadena);
-            $cadena=str_ireplace("DROP TABLE", "", $cadena);
-            $cadena=str_ireplace("DROP DATABASE", "", $cadena);
-            $cadena=str_ireplace("TRUNCATE TABLE", "", $cadena);
-            $cadena=str_ireplace("SHOW TABLES", "", $cadena);
-            $cadena=str_ireplace("SHOW DATABASES", "", $cadena);
-            $cadena=str_ireplace("<? php", "", $cadena);
-            $cadena=str_ireplace("?>", "", $cadena);
-            $cadena=str_ireplace("--", "", $cadena);
-            $cadena=str_ireplace(">", "", $cadena);
-            $cadena=str_ireplace("<", "", $cadena);
-            $cadena=str_ireplace("[", "", $cadena);
-            $cadena=str_ireplace("]", "", $cadena);
-            $cadena=str_ireplace("^", "", $cadena);
-            $cadena=str_ireplace("==", "", $cadena);
-            $cadena=str_ireplace(";", "", $cadena);
-            $cadena=str_ireplace("::", "", $cadena);
-            $cadena=stripslashes($cadena);
-            $cadena=trim($cadena); 
-            return $cadena;
-        }
-
-        /* ----- Funcion Verificar Datos -----*/
-
-        protected static function verificar_datos($filtro,$cadena){
-            if(preg_match("/^".$filtro."$/", $cadena)){
-                return false;
-            }else{
-                return true;
-            }
-        }
-
-        /* ----- Funcion Verificar Fechas -----*/
-
-        protected static function verificar:fecha($fecha){
-            $valores=explode('-', $fecha);
-            if(count($valores)==3 && checkdate($valores[1],$valores[2], $valores[0])){
-
-                return false;
-
-            }else{
-
-                return true;
-
-            }
-
-        }
-
-        /* ----- Funcion Paginador de Tablas -----*/
-
-        protected static function paginador_tablas($pagina,$Npaginas,$url,$botones){
-
-            $tabla='<nav aria-label="Page navigation example"><ul class="pagination justify-content-center">';
-
-            if($pagina==1){
-               $tabla.='<li class="page-item disabled"><a class="page-link"><i class="fa-solid fa-angles-left"></i></a></li>'; 
-            }else{
-                $tabla.=' 
-                <li class="page-item"><a class="page-link" href="'.$url.'1/"><i class="fa-solid fa-angles-left"></i></a></li>
+        if ($pagina == 1) {
+            $tabla .= '<li class="page-item disabled"><a class="page-link"><i class="fa-solid fa-angles-left"></i></a></li>';
+        } else {
+            $tabla .= ' 
+                <li class="page-item"><a class="page-link" href="' . $url . '1/"><i class="fa-solid fa-angles-left"></i></a></li>
                 
-                <li class="page-item"><a class="page-link" href="'.$url.($pagina-1).'/">Anterior</a></li> 
-                '; 
-            }
-
-            $ci=0;
-            for($i=$pagina; $i<=$Npaginas;$i++){
-
-                if($ci>=$botones)
-                {
-                    break;
-                }
-
-                if($pagina==$i){
-
-                    $tabla.='<li class="page-item"><a class="page-link active"  href="'.$url.$i.'/">'.$i.'</a></li>';
-
-                }else{
-
-                    $tabla.='<li class="page-item"><a class="page-link"  href="'.$url.$i.'/">'.$i.'</a></li>';
-
-                }
-                $ci++;
-            }
-
-            if($pagina==$Npaginas){
-
-                $tabla.=' <li class="page-item disabled"><a class="page-link"><i class="fa-solid fa-angles-right"></i></a></li>'; 
-
-             }else{
-
-                 $tabla.=' 
-
-                 <li class="page-item"><a class="page-link" href="'.$url.($pagina+1).'/">Siguiente</a></li>
-
-                 <li class="page-item"><a class="page-link" href="'.$url.$Npaginas.'/"><i class="fa-solid fa-angles-right"></i></a></li>
-                 '; 
-             }
-
-            $tabla.='</ul></nav>';
-            return $tabla;
+                <li class="page-item"><a class="page-link" href="' . $url . ($pagina - 1) . '/">Anterior</a></li> 
+                ';
         }
 
+        $ci = 0;
+        for ($i = $pagina; $i <= $Npaginas; $i++) {
 
+            if ($ci >= $botones) {
+                break;
+            }
+
+            if ($pagina == $i) {
+
+                $tabla .= '<li class="page-item"><a class="page-link active"  href="' . $url . $i . '/">' . $i . '</a></li>';
+            } else {
+
+                $tabla .= '<li class="page-item"><a class="page-link"  href="' . $url . $i . '/">' . $i . '</a></li>';
+            }
+            $ci++;
+        }
+
+        if ($pagina == $Npaginas) {
+
+            $tabla .= ' <li class="page-item disabled"><a class="page-link"><i class="fa-solid fa-angles-right"></i></a></li>';
+        } else {
+
+            $tabla .= ' 
+
+                 <li class="page-item"><a class="page-link" href="' . $url . ($pagina + 1) . '/">Siguiente</a></li>
+
+                 <li class="page-item"><a class="page-link" href="' . $url . $Npaginas . '/"><i class="fa-solid fa-angles-right"></i></a></li>
+                 ';
+        }
+
+        $tabla .= '</ul></nav>';
+        return $tabla;
     }
-
+}
