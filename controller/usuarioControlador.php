@@ -38,7 +38,7 @@ class usuarioControlador extends usuarioModelo
             echo json_encode($alerta);
             exit();
         }
-        /*=== Verificando integridad de los datos ====
+        /*=== Verificando integridad de los datos ====*/
 
         if (mainMOdel::verificar_datos("[0-9-]{10,20}", $numdoc)) {
 
@@ -123,7 +123,7 @@ class usuarioControlador extends usuarioModelo
             ];
             echo json_encode($alerta);
             exit();
-        }*/
+        }
 
         /*=== Comprobando Numero de Documento ===*/
 
